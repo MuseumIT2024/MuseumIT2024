@@ -112,8 +112,8 @@ const setupQuiz = () => {
  document.getElementById('question').textContent = quiz[quizIndex].question;
  let buttonIndex = 0;
  while(buttonIndex < buttonLength) {
-　　　　 button[buttonIndex].textContent = quiz[quizIndex].choices[buttonIndex];
-　　　　 buttonIndex++;
+  button[buttonIndex].textContent = quiz[quizIndex].choices[buttonIndex];
+  buttonIndex++;
  }
 }
  
