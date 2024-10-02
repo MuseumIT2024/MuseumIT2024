@@ -15,7 +15,6 @@ img { max-width:100%; height:auto; }
 .absolute{
     position: absolute;
     top: 50px;
-    left:-5px;
     text-align: center;
 }
 
