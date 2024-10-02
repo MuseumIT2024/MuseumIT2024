@@ -9,7 +9,7 @@ img { max-width:100%; height:auto; }
 
 .relative{
     position: relative;
-    width: 380px;
+    width: 100%;
 }
 
 .absolute{
