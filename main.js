@@ -136,14 +136,12 @@ while(handlerIndex < buttonLength) {
    clickHandler(e);
  });
  handlerIndex++;
-}
-
-const clickHandler = (e) => {
-  ...
-  quizIndex++;
+   quizIndex++;
   if (quizIndex < quizLength) {
     setupQuiz();
  } else {
   window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
  }
 }
+
+
