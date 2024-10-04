@@ -168,7 +168,7 @@ img { max-width:100%; height:auto; }
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
     width: 80%;
-    height: 50vh;
+    height: 60vh;
     margin: 100px auto;
     padding: 10px;
 }
@@ -182,7 +182,7 @@ img { max-width:100%; height:auto; }
      display: flex;
      justify-content: space-around;
      width: 100%;*/
-     margin-top: 50px;
+     margin-top: 40px;
      display: -webkit-flex;
      display: flex;
      -webkit-justify-content: space-between;
