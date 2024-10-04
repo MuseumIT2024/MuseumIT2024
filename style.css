@@ -23,7 +23,11 @@ img { max-width:100%; height:auto; }
 .absolute{
     position: absolute;
     top: 50px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
     text-align: center;
+    overflow:hidden;
 }
 
 .fun{
