@@ -7,7 +7,8 @@ const quiz = [
             '散歩おじさん',
             '沖縄在住の人'
         ],
-        correct: '散歩おじさん'
+        correct: '散歩おじさん',
+        hint:'情報ライブラリーは教職員、地域すべての人が利用可能です'
     },
     {
         question: 'Q2. 情報ライブラリー独自でのこだわりはなんですか？',
@@ -18,7 +19,8 @@ const quiz = [
             '帯だけを借りれるようにしている',
             '帯を単語帳のようにまとめ、自由に閲覧できるようにしている'
         ],
-        correct: '帯を切り取り表紙の裏にはることで帯の内容を残している'
+        correct: '帯を切り取り表紙の裏にはることで帯の内容を残している',
+        hint:'普通の本にはこのようなことはありません'
     },
     {
         question: 'Q3. 情報ライブラリーには様々な特徴のある家具がある。1つは寝転んで本が読めるような家具。2つ目は何ですか？',
@@ -29,7 +31,8 @@ const quiz = [
             '未来大学のような家具'
 
         ],
-        correct: 'バーカウンターのような家具'
+        correct: 'バーカウンターのような家具',
+        hint:'この家具はリラックスしたような雰囲気です'
     },
 ]
 
@@ -47,6 +50,7 @@ const setupQuiz = () => {
         button[buttonIndex].textContent = quiz[quizIndex].choices[buttonIndex];
         buttonIndex++;
     }
+    document.getElementById('hint').textContent = '';
 }
 
 setupQuiz();
@@ -75,3 +79,13 @@ while(handlerIndex < buttonLength) {
     });
     handlerIndex++;
 }
+
+function showHint(){
+    if (document.getElementById('hint').textContent ==''){
+        document.getElementById('hint').textContent = quiz[quizIndex].hint;
+    }else{
+        document.getElementById('hint').textContent ='';
+    }
+
+}
+
