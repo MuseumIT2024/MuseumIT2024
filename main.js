@@ -36,6 +36,9 @@ const quiz = [
     },
 ]
 
+"use strict";
+const result = document.querySelector(".result");
+
 const quizLength = quiz.length;
 let quizIndex = 0;
 let score = 0;
@@ -69,6 +72,7 @@ const clickHandler = (e) => {
         setupQuiz();
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
+        document.getElementById('ranking1').style.display = 'block';
     }
 }
 
