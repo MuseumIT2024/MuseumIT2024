@@ -1,215 +1,55 @@
 
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="relative">
+        <br>
+        <img src="fun.png" class="fun">
 
-@charset "utf-8";
+        <div class="absolute">
+            
+            <p class="text">
+                <span>触発の連鎖を通して豊かな文化的体験を深める</span><br>
+                <strong>ミュージアムIT</strong>
+            </p>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+            <p>ここに</p>
+            <p>クイズの説明が</p>
+            <p>書かれる</p>
+            <br>
+            
+            <div class="card">
+                <h3 id="question"></h3>
+                <div class="choice" id="choice1">
+                  <button></button>
+                  <br>
+                  <button></button>
+                  <br>
+                  <button></button>
+                  <br>
+                  <button></button>
+                  <br>
+                  <div class="hintButton" onclick="showHint();">ヒント！</div>
+                  <div id="hint" class="hint"></div>
 
-img { max-width:100%; height:auto; }
+                </div>
+                
+            </div>
 
-.quizno{
-    font-size:20px;
-    text-align: center;
-}
+            
+            <a href="ranking.html" id="ranking1">ランキングを表示する</a>
 
-.relative{
-    position: relative;
-    width: 390px;
-}
+        </div>
 
-.absolute{
-    position: absolute;
-    top: 50px;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    text-align: center;
-}
+    </div>
 
-.fun{
-    filter: blur(6px);
-    filter: contrast(0.5);
-    filter: opacity(30%);
-}
-
-
-.text{
-    font-size: 13px;
-    font-family: 'Noto Serif JP', serif;
-    background-color: #ccffee;
-    letter-spacing: 2px;
-    }
-    .text span{
-    opacity: 0;
-    animation: letter-glow 0.7s 0s ease both;
-    }
-    .is-act .text span{
-    opacity: 1;
-    }
-    .text span:nth-child(1) {
-    animation-delay: 0.5s;
-    }
-    .text span:nth-child(2) {
-    animation-delay: 0.7s;
-    }
-    .text span:nth-child(3) {
-    animation-delay: 0.9s;
-    }
-    .text strong{
-    opacity: 0;
-    filter: blur(10px);
-    animation: letter-glow 0.7s 0s ease both, blur 2s 0s ease both;
-    font-size: 200%;
-    animation-delay: 1.5s;
-    }
-    .text span:nth-child(4) {
-    animation-delay: 2.1s;
-    }
-    .text span:nth-child(5) {
-    animation-delay: 2.3s;
-    }
-    .text span:nth-child(6) {
-    animation-delay: 2.5s;
-    }
-    .text span:nth-child(7) {
-    animation-delay: 2.7s;
-    }
-    .text span:nth-child(8) {
-    animation-delay: 2.9s;
-    }
-    .text span:nth-child(9) {
-    animation-delay: 3.1s;
-    }
-    .text span:nth-child(10) {
-    animation-delay: 3.3s;
-    }
-    .text span:nth-child(11) {
-    animation-delay: 3.5s;
-    }
-    .is-act .text span{
-      opacity: 0;
-      animation: letter-glow 0.7s 0s ease both;
-    }
-    .is-act .text span{
-    opacity: 1;
-    }
-    .is-act .text span:nth-child(1) {
-      animation-delay: 0.5s;
-    }
-    .is-act .text span:nth-child(2) {
-      animation-delay: 0.7s;
-    }
-    .is-act .text span:nth-child(3) {
-      animation-delay: 0.9s;
-    }
-    .is-act .text strong{
-      opacity: 0;
-      filter: blur(10px);
-      animation: letter-glow 0.7s 0s ease both, letter-blur 2s 0s ease both;
-      font-size: 200%;
-      animation-delay: 1.5s;
-    }
-    .is-act .text span:nth-child(4) {
-      animation-delay: 2.1s;
-    }
-    .is-act .text span:nth-child(5) {
-      animation-delay: 2.3s;
-    }
-    .is-act .text span:nth-child(6) {
-      animation-delay: 2.5s;
-    }
-    .is-act .text span:nth-child(7) {
-      animation-delay: 2.7s;
-    }
-    .is-act .text span:nth-child(8) {
-      animation-delay: 2.9s;
-    }
-    .is-act .text span:nth-child(9) {
-      animation-delay: 3.1s;
-    }
-    .is-act .text span:nth-child(10) {
-      animation-delay: 3.3s;
-    }
-    .is-act .text span:nth-child(11) {
-      animation-delay: 3.5s;
-    }
-    @keyframes letter-glow{
-    0%   {
-      opacity: 0;
-      text-shadow: 0px 0px 1px rgba(255,255,255,0.1);
-    }
-    66%  {
-      opacity: 1;
-      text-shadow: 0px 0px 20px rgba(255,255,255,0.9);
-    }
-    77%   { opacity: 1;  }
-    100% {
-      opacity:0.7;
-      text-shadow: 0px 0px 20px rgba(255,255,255,0.0);
-    }
-    }
-    @keyframes blur {
-    0% {
-      opacity: 0;
-      filter: blur(10px);
-    }
-    100% {
-      opacity: 1;
-      filter: blur(0);
-    }
-        
-    }
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
-    width: 80%;
-    height: 80vh;
-    margin: 100px auto;
-    padding: 10px;
-}
-     
-.card h3 {
-     font-size: 24px;
-}
-     
-.card .choice {
-    /* margin-top: 50px;
-     display: flex;
-     justify-content: space-around;
-     width: 100%;*/
-     margin-top: 40px;
-     display: -webkit-flex;
-     display: flex;
-     -webkit-justify-content: space-between;
-     justify-content: space-between;
-     -webkit-align-items: flex-start;
-     align-items: center;
-     -webkit-flex-direction: column;
-     flex-direction: column;
-     height: 150px;
-}
-     
-.card .choice button {
-     border: 1px solid rgba(0, 0, 0);
-     padding: 10px 20px;
-     cursor: pointer;
-     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-     outline: none;
-     background-color: #fff;
-     width: 250px;
-}
-
-.hintButton{
-  display: inline-block;
-  background: #ccffee;
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
+<script src="main.js"></script>
+</body>
+</html>
