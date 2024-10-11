@@ -76,6 +76,7 @@ const clickHandler = (e) => {
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
         document.getElementById('card').style.height = '58vh';
+        document.getElementById('card').style.height = '58svh';
         document.getElementById('hint').textContent = '';
         document.getElementById('hintbutton').style.display = 'none';
         document.getElementById('hintphoto').style.display = 'block';
