@@ -3,11 +3,11 @@ const quiz = [
         question: 'Q1. 情報ライブラリーではどのような人が本を借りれますか？',
         choices: [
             '火星人',
-            '地底人',
-            '散歩おじさん',
-            '沖縄在住の人'
+            '函館在住の人',
+            '宇宙人',
+            '札幌在住の人'
         ],
-        correct: '散歩おじさん',
+        correct: '函館在住の人',
         hint:'情報ライブラリーは教職員、地域すべての人が利用可能です'
     },
     {
@@ -75,6 +75,11 @@ const clickHandler = (e) => {
         setupQuiz();
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
+        document.getElementById('card').style.height = '58vh';
+        document.getElementById('hint').textContent = '';
+        document.getElementById('hintbutton').style.display = 'none';
+        document.getElementById('hintphoto').style.display = 'block';
+        document.getElementById('hintphoto').src = 'ranking.png'
         document.getElementById('rankingbutton').style.display = 'block';
     }
 }
@@ -90,10 +95,10 @@ while(handlerIndex < buttonLength) {
 function showHint(){
     if (document.getElementById('hint').textContent ==''){
         document.getElementById('hint').textContent = quiz[quizIndex].hint;
-        document.getElementById('hintphoto').style.display = 'block'
+        document.getElementById('hintphoto').style.display = 'block';
     }else{
         document.getElementById('hint').textContent ='';
-        document.getElementById('hintphoto').style.display = 'none'
+        document.getElementById('hintphoto').style.display = 'none';
     }
 
 }
