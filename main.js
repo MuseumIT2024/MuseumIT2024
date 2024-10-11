@@ -20,7 +20,7 @@ const quiz = [
             '帯を単語帳のようにまとめ、自由に閲覧できるようにしている'
         ],
         correct: '帯を切り取り表紙の裏にはることで帯の内容を残している',
-        hint:'普通の本にはこのようなことはありません'
+        hint:'普通の本にこのようなことはありません'
     },
     {
         question: 'Q3. 情報ライブラリーには様々な特徴のある家具がある。1つは寝転んで本が読めるような家具。2つ目は何ですか？',
@@ -32,7 +32,7 @@ const quiz = [
 
         ],
         correct: 'バーカウンターのような家具',
-        hint:'この家具はリラックスしたような雰囲気です'
+        hint:'この家具はリラックスした雰囲気です'
     },
 ]
 
@@ -54,6 +54,7 @@ const setupQuiz = () => {
         buttonIndex++;
     }
     document.getElementById('hint').textContent = '';
+    document.getElementById('hintphoto').style.display = 'none'
 }
 
 setupQuiz();
@@ -67,12 +68,14 @@ const clickHandler = (e) => {
     }
 
     quizIndex++;
+    document.getElementById('hintphoto').src = 'hint'+(quizIndex+1)+ '.png';
+    //document.getElementById('hintphoto').src=hintp[quizIndex];
 
     if (quizIndex < quizLength) {
         setupQuiz();
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
-        document.getElementById('ranking1').style.display = 'block';
+        document.getElementById('rankingbutton').style.display = 'block';
     }
 }
 
@@ -87,8 +90,10 @@ while(handlerIndex < buttonLength) {
 function showHint(){
     if (document.getElementById('hint').textContent ==''){
         document.getElementById('hint').textContent = quiz[quizIndex].hint;
+        document.getElementById('hintphoto').style.display = 'block'
     }else{
         document.getElementById('hint').textContent ='';
+        document.getElementById('hintphoto').style.display = 'none'
     }
 
 }
