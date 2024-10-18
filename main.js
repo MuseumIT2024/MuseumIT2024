@@ -68,13 +68,15 @@ const clickHandler = (e) => {
     }
 
     quizIndex++;
-    document.getElementById('hintphoto').src = 'hint'+(quizIndex+1)+ '.png';
+
     //document.getElementById('hintphoto').src=hintp[quizIndex];
 
     if (quizIndex < quizLength) {
+        document.getElementById('hintphoto').src = 'hint'+(quizIndex+1)+ '.png';
         setupQuiz();
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
+        document.getElementById('card').style.display = 'none';
         document.getElementById('card').style.height = '58vh';
         document.getElementById('card').style.height = '58svh';
         document.getElementById('hint').textContent = '';
