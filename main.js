@@ -79,8 +79,7 @@ const clickHandler = (e) => {
         document.getElementById('card').style.height = '58svh';
         document.getElementById('hint').textContent = '';
         document.getElementById('hintbutton').style.display = 'none';
-        document.getElementById('hintphoto').style.display = 'block';
-        document.getElementById('hintphoto').src = 'ranking.png'
+        document.getElementById('hintphoto').style.display = 'none';
         document.getElementById('rankingbutton').style.display = 'block';
     }
 }
