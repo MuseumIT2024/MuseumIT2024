@@ -217,8 +217,8 @@ img { max-width:100%; height:auto; }
 
 #rankingbutton { 
   display: none;
-  padding-top: 20px;
-  padding-bottom:10px;
+  padding-top: px;
+  padding-bottom:60px;
 }   /* 非表示 */
 
 /*ランキング*/
