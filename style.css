@@ -12,10 +12,7 @@
 
 img { max-width:100%; height:auto; }
 
-.quizno{
-    font-size:20px;
-    text-align: center;
-}
+
 
 .relative{
     position: relative;
@@ -189,7 +186,11 @@ img { max-width:100%; height:auto; }
      
 .card h3 {
      font-size: 24px;
-     
+     text-align: left;
+}
+.card h2{
+  font-size:20px;
+  text-align: center;
 }
      
 .card .choice {
@@ -218,7 +219,8 @@ img { max-width:100%; height:auto; }
      background-color: rgba(66, 66, 175, 0.747);
      width: 250px;
      border-radius: 30px;
-     color : #ffffff
+     color : #ffffff;
+     text-align: left;
 }
 
 .hintButton{
@@ -227,6 +229,14 @@ img { max-width:100%; height:auto; }
   padding: 5px 10px;
   cursor: pointer;
   box-shadow: 0 0 5px rgba(0, 0, 0.8, 0.8);
+}
+
+.video{
+  align-items: center;
+}
+
+.hint{
+  text-align: left;
 }
 
 #rankingbutton { 
