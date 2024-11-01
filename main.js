@@ -8,19 +8,41 @@ const quiz = [
             '札幌在住の人'
         ],
         correct: '函館在住の人',
-        hint:'情報ライブラリーは教職員、地域すべての人が利用可能です'
+        hint:'情報ライブラリーは教職員、地域の人が利用可能です'
+    },
+    {
+        question: '自習スペースの机の天板は何で作られていますか？',
+        choices: [
+            '鉄板',
+            '木',
+            'プラスチック',
+            '３Dプリンター'
+        ],
+        correct: '木',
+        hint:'小学校から馴染みがある人が多いと思います。'
     },
     {
         question: '情報ライブラリー独自のこだわりはなんですか？',
         choices: [
 
-            '帯を切り取り表紙の裏にはることで帯の内容を残している',
+            '帯を切り取り表紙の裏に貼ることで、帯の内容を残している',
             '帯を加工して、しおりにしている',
             '帯だけを借りれるようにしている',
             '帯を単語帳のようにまとめ、自由に閲覧できるようにしている'
         ],
-        correct: '帯を切り取り表紙の裏にはることで帯の内容を残している',
-        hint:'普通の本にこのようなことはありません'
+        correct: '帯を切り取り表紙の裏に貼ることで、帯の内容を残している',
+        hint:'帯を捨てるということがなくなります'
+    },
+    {
+        question: 'ライブラリーの奥の方に４つの大きなオブジェがあります。どんな特徴をしていますか？',
+        choices: [
+            '４つとも一緒',
+            '２つずつ一緒',
+            '１つだけ違う',
+            '全て違う'
+        ],
+        correct: '全て違う',
+        hint:'模型の〇番をみてみよう！'
     },
     {
         question: '情報ライブラリーには様々な特徴のある家具がある。1つは寝転んで本が読めるような家具。2つ目は何ですか？',
@@ -90,6 +112,15 @@ const clickHandler = (e) => {
     quizIndex++;
      //document.getElementById('hintphoto').src=hintp[quizIndex];
 
+     function hideQuiz(){ 
+        document.getElementById('card').style.display = 'none';
+        document.getElementById('card').style.height = '58vh';
+        document.getElementById('card').style.height = '58svh';
+        document.getElementById('hintbutton').style.display = 'none';
+        document.getElementById('hintphoto').style.display = 'none';
+     }
+
+
     function showQuiz(){
         document.getElementById('video').style.display='none'
         document.getElementById('card').style.display = 'block';
@@ -97,7 +128,8 @@ const clickHandler = (e) => {
     }
 
     v.addEventListener("ended", (event) =>{
-        showQuiz();
+     showQuiz();
+
     });
 
 
@@ -106,15 +138,11 @@ const clickHandler = (e) => {
         document.getElementById('hintphoto').src = 'hint'+(quizIndex+1)+ '.png';
         setupQuiz();
 
-        if(quizIndex==3){
+        if(quizIndex==5){
             window.alert('情報ライブラリーのクイズはこれで終了！');
             document.getElementById('video').style.display='block'
             v.play();
-            document.getElementById('card').style.display = 'none';
-            document.getElementById('card').style.height = '58vh';
-            document.getElementById('card').style.height = '58svh';
-            document.getElementById('hintbutton').style.display = 'none';
-            document.getElementById('hintphoto').style.display = 'none';
+            hideQuiz();
         }
     } else {
         window.alert('終了！あなたの正解数は' + score + '/' + quizLength + 'です！');
@@ -125,6 +153,8 @@ const clickHandler = (e) => {
         document.getElementById('hintbutton').style.display = 'none';
         document.getElementById('hintphoto').style.display = 'none';
         document.getElementById('rankingbutton').style.display = 'block';
+
+        //document.getElementById('quizscore').textContent = 'sasaas';
     }
 }
 
