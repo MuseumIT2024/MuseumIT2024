@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>クイズ</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
@@ -35,7 +35,10 @@
             <div class="card" id="card">
                 <h2 id="quizno"></h2>
                 <h3 id="question"></h3>
+                <div class="kotae" id="kotae">答え</div>
+                <div class="answer" id="answer">答え</div>
                 <div class="choice" id="choice1">
+                <div id = "button">
                   <button></button>
                   <br>
                   <button></button>
@@ -44,6 +47,10 @@
                   <br>
                   <button></button>
                   <br>
+                </div>
+                  <div class="tip" id="tip">解説文</div>
+                  <div class="nextButton" id="nextbutton" onClick="nextQuiz();" style="display:none">次へ</div>
+
                   <div class="hintButton" id="hintbutton" onclick="showHint();">ヒント！</div>
                   <div id="hint" class="hint"></div>
                   <img src="hint1.png" id="hintphoto" style="display:none">
@@ -51,9 +58,6 @@
                 </div>
                 
             </div>
-
-
-
             
             <a href="ranking.html" id="rankingbutton">ランキングを表示する</a>
 
