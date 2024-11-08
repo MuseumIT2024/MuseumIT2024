@@ -94,6 +94,7 @@ v.pause();
 const setupQuiz = () => {
     document.getElementById('kotae').style.display = 'none';
     document.getElementById('answer').style.display = 'none';
+    document.getElementById('answerphoto').style.display = 'none';
     document.getElementById('tip').style.display = 'none';
     document.getElementById('tip').textContent = quiz[quizIndex].tip;
     document.getElementById('quizno').textContent = 'Q.' + (quizIndex+1);
@@ -119,6 +120,7 @@ const clickHandler = (e) => {
     document.getElementById('kotae').style.display = 'block';
     document.getElementById('answer').textContent = quiz[quizIndex].correct;
     document.getElementById('answer').style.display = 'block';
+    document.getElementById('answerphoto').style.display = 'block';
     document.getElementById('button').style.display = 'none'
     document.getElementById('nextbutton').style.display = 'block';
     document.getElementById('hintbutton').style.display = 'none';
@@ -183,6 +185,7 @@ function nextQuiz(){
 
     if (quizIndex < quizLength) {
         document.getElementById('hintphoto').src = 'hint'+(quizIndex+1)+ '.png';
+        document.getElementById('answerphoto').src = 'answer'+(quizIndex+1)+ '.png';
         setupQuiz();
 
         if(quizIndex==5){
@@ -200,6 +203,7 @@ function nextQuiz(){
         document.getElementById('hintbutton').style.display = 'none';
         document.getElementById('hintphoto').style.display = 'none';
         document.getElementById('rankingbutton').style.display = 'block';
+        document.getElementById('answerphoto').style.display = 'none';
         //document.getElementById('quizscore').textContent = 'sasaas';
     }
 
