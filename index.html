@@ -3,67 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>クイズ</title>
+    <title>はじめに</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
     <div class="relative">
-        <!-- <br>
-        <img src="fun2.png" class="fun"> -->
+        <br>
+        <img src="fun.png" class="fun">
 
         <div class="absolute">
             
-            <!-- <br>   
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>            <br>            <br>  -->
+            <p class="text">
+                <span>触発の連鎖を通して豊かな文化的体験を深める</span><br>
+                <strong>ミュージアムIT</strong>
+            </p>
 
-
-
+            <br>   
+            <p>模型や説明などの展示を見ながら</p>
+            <p>正解だと思うのを一つ選んでね</p>
+            <p>正解するほど(未来大)偏差値が上がるよ！</p>
+            <p>高得点を目指して頑張ろう！</p>
+            <br>
         
         </div>
-
-        <div class="video">
-        <video id="video" src="lib_video.mp4 " style="display:none" autoplay playsinline muted></video>
-        </div>
-
-            <div class="card" id="card">
-                <h2 id="quizno"></h2>
-                <h3 id="question"></h3>
-                <div class="kotae" id="kotae">答え</div>
-                <div class="answer" id="answer">答え</div>
-                <div class="choice" id="choice1">
-                <div id = "button">
-                  <button></button>
-                  <br>
-                  <button></button>
-                  <br>
-                  <button></button>
-                  <br>
-                  <button></button>
-                  <br>
-                </div>
-                  <div class="tip" id="tip">解説文</div>
-                  <div class="nextButton" id="nextbutton" onClick="nextQuiz();" style="display:none">次へ</div>
-
-                  <div class="hintButton" id="hintbutton" onclick="showHint();">ヒント！</div>
-                  <div id="hint" class="hint"></div>
-                  <img src="hint1.png" id="hintphoto" style="display:none">
-
-                </div>
-                
-            </div>
-            
-            <a href="ranking.html" id="rankingbutton">ランキングを表示する</a>
-
-      
-
     </div>
+
+    <h4>名前を入れてね</h4>
+    <form action="quiz.html" method="post">
+    <label>名前：</label><input id="name" type="text" size="16" value="匿名"></label>
+    </form>
+
+    <br>
+    <br>
+    <br>
+    <a href="index.html" id="startbutton">
+        <img src="startbutton.png">
+    </a>
+
+
 
 <script src="main.js"></script>
 </body>
