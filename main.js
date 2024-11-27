@@ -80,7 +80,8 @@ const result = document.querySelector(".result");
 
 const quizLength = quiz.length;
 let quizIndex = 0;
-let score = 0;
+//class score {};
+var score=0;
 
 const button = document.getElementsByTagName('button');
 const buttonLength = button.length;
@@ -205,6 +206,9 @@ function nextQuiz(){
         document.getElementById('rankingbutton').style.display = 'block';
         document.getElementById('answerphoto').style.display = 'none';
         //document.getElementById('quizscore').textContent = 'sasaas';
+
+        window.location.href = `ranking.html?score=${score}`;
+
     }
 
     function hideQuiz(){ 
@@ -215,3 +219,4 @@ function nextQuiz(){
         document.getElementById('hintphoto').style.display = 'none';
      }
 }
+
