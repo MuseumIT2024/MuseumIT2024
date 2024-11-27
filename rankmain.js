@@ -1,10 +1,9 @@
 
-var scor = document.createElement("script");
-scor.src='main.js';
+function getScoreFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('score'); // score の値を取得
+}
 
-//import { score } from './main.mjs';
-
-//let sco = new score;
-var sco = 0;
-
-  //  document.getElementById('quizscore').textContent = score;
+const score = getScoreFromURL();
+console.log(score); // 取得したスコアをコンソールに表示
+document.getElementById('quizscore').textContent=score;
