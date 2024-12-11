@@ -24,7 +24,7 @@ const quiz = [
         tip:'机の天板は木で作られています'
     },
     {
-        question: '情報ライブラリー独自のこだわりはなんですか？',
+        question: '情報ライブラリー独自のこだわりは何ですか？',
         choices: [
 
             '帯を切り取り表紙の裏に貼ることで、帯の内容を残している',
@@ -61,6 +61,18 @@ const quiz = [
         tip:'自由な空間を補強するようなものとしてこれらの家具になりました'
     },
     {
+        question: '情報ライブラリーの机の上にT字型のライトがあります。このライトの工夫している点は何ですか？',
+        choices: [
+            '手元がとても明るく見える',
+            '目線の高さに設置されている',
+            '触ると暖かく、人肌を感じることができる',
+            '明るさを調節できる'
+        ],
+        correct: '目線の高さに設置されている',
+        hint:'特に、向かいに人がいるときに機能します',
+        tip:'目線の高さにライトがあることで、向かいの人と目が合わないようになっています'
+    },
+    {
         question: '食堂は何階にありますか？',
         choices: [
             '２階',
@@ -70,12 +82,15 @@ const quiz = [
         ],
         correct: '１階',
         hint:'大学に来てたらわかりますよね',
-        tip:'クイズ６の解説です'
+        tip:'１階の玄関から入ると、右側に食堂があります(写真は公式サイトから)'
     },
 ]
 
 "use strict";
 const result = document.querySelector(".result");
+
+const params = new URLSearchParams(window.location.search);
+const username = params.get("username") || "匿名";
 
 
 const quizLength = quiz.length;
@@ -86,6 +101,7 @@ var score=0;
 const button = document.getElementsByTagName('button');
 const buttonLength = button.length;
 document.getElementById('quizno').textContent = 'Q.' + (quizIndex+1);
+document.getElementById('username').textContent = username + 'さんの挑戦';
 
 var v = document.getElementById('video');
 //一時停止
@@ -93,6 +109,8 @@ v.pause();
 
 
 const setupQuiz = () => {
+
+    document.getElementById('videotext').style.display = 'none';
     document.getElementById('kotae').style.display = 'none';
     document.getElementById('answer').style.display = 'none';
     document.getElementById('answerphoto').style.display = 'none';
@@ -144,8 +162,10 @@ const clickHandler = (e) => {
 
     function showQuiz(){
         document.getElementById('video').style.display='none'
+        document.getElementById('videotext').style.display='none'
         document.getElementById('card').style.display = 'block';
         document.getElementById('hintbutton').style.display = 'block';
+        document.getElementById('username').style.display = 'block';
     }
 
     v.addEventListener("ended", (event) =>{
@@ -189,9 +209,10 @@ function nextQuiz(){
         document.getElementById('answerphoto').src = 'answer'+(quizIndex+1)+ '.png';
         setupQuiz();
 
-        if(quizIndex==5){
+        if(quizIndex==6){
             window.alert('情報ライブラリーのクイズはこれで終了！');
             document.getElementById('video').style.display='block'
+            document.getElementById('videotext').style.display='block'
             v.play();
             hideQuiz();
         }
@@ -217,6 +238,7 @@ function nextQuiz(){
         document.getElementById('card').style.height = '58svh';
         document.getElementById('hintbutton').style.display = 'none';
         document.getElementById('hintphoto').style.display = 'none';
+        document.getElementById('username').style.display='none'
      }
 }
 
