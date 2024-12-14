@@ -31,35 +31,78 @@
         </div>
     </div>
 
-    <section id="image-carousel" class="splide" aria-label="お気に入りの写真">
-        <div class="splide__track">
-              <ul class="splide__list">
-                  <li class="splide__slide">
-                      <img src="image01.jpg" alt="">
-                  </li>
-                  <li class="splide__slide">
-                      <img src="image02.jpg" alt="">
-                  </li>
-                  <li class="splide__slide">
-                      <img src="image03.jpg" alt="">
-                  </li>
-              </ul>
-        </div>
-      </section>
 
+    <div class="c-carousel">
+        <!-- ①スライドエリア解説 開始 -->
+        <input class="c-carousel__activator-main" type="radio" checked id="carousel-main-1" name="carousel-main">
+        <input class="c-carousel__activator-main" type="radio" id="carousel-main-2" name="carousel-main">
+        <input class="c-carousel__activator-main" type="radio" id="carousel-main-3" name="carousel-main">
+        <input class="c-carousel__activator-main" type="radio" id="carousel-main-4" name="carousel-main">
+        <!-- ①スライドエリア解説 終了 -->
+        <div class="c-carousel__main">
+          <!-- ②ボタンエリア解説 開始 -->
+          <div class="c-carousel__main-control">
+            <div class="c-carousel__main-control-item">
+              <label class="c-carousel__btn-next-main" for="carousel-main-2">
+                <img class="c-image-arrow" src="next.jpg" alt=">>"/>
+              </label>
+            </div>
+            <div class="c-carousel__main-control-item">
+              <label class="c-carousel__btn-prev-main" for="carousel-main-1">
+                <img class="c-image-arrow" src="prev.jpg" alt=""/>
+              </label>
+              <label class="c-carousel__btn-next-main" for="carousel-main-3">
+                <img class="c-image-arrow" src="next.jpg" alt=""/>
+              </label>
+            </div>
+            <div class="c-carousel__main-control-item">
+              <label class="c-carousel__btn-prev-main" for="carousel-main-2">
+                <img class="c-image-arrow" src="prev.jpg" alt=""/>
+              </label>
+              <label class="c-carousel__btn-next-main" for="carousel-main-4">
+                <img class="c-image-arrow" src="next.jpg" alt=""/>
+              </label>
+            </div>
+            <div class="c-carousel__main-control-item">
+              <label class="c-carousel__btn-prev-main" for="carousel-main-3">
+                <img class="c-image-arrow" src="prev.jpg" alt=""/>
+              </label>
+            </div>
+          </div>
+          <!-- ②ボタンエリア解説 終了 -->
+          <!-- ①スライドエリア解説 開始 -->
+          <div class="c-carousel__main-track">
+            <div class="c-carousel__main-item">
+              <img class="c-carousel__main-image" src="how1.jpg" alt=""/>
+            </div>
+            <div class="c-carousel__main-item">
+              <img class="c-carousel__main-image" src="how2.jpg" alt=""/>
+            </div>
+            <div class="c-carousel__main-item">
+              <img class="c-carousel__main-image" src="how3.jpg" alt=""/>
+            </div>
+            <div class="c-carousel__main-item">
+              <img class="c-carousel__main-image" src="how4.jpg" alt=""/>
+            </div>
+          </div>
+          <!-- ①スライドエリア解説 終了 -->
+        </div>
+      </div>
+
+      <br>
 
     <form action="quiz.html" method="get">
         <label>名前：</label>
         <input id="name" name="username" type="text" size="16" value="匿名">
-        <button type="submit">クイズを開始</button>
-      </form>
-      
-
-    <br>
-    <br>
-    <br>
+        <button type="submit">クイズを開始</button> 
+    </form>
+    
+    
+    
+    
 
 
 
 </body>
+
 </html>
