@@ -45,7 +45,7 @@ const quiz = [
             '全て違う'
         ],
         correct: '全て違う',
-        hint:'模型の〇番をみてみよう！',
+        hint:'情報ライブラリーの入口とは反対側の端っこにあります',
         tip:'よく見てね、4つとも違う形をしているよ'
     },
     {
@@ -81,8 +81,68 @@ const quiz = [
             '食堂なんてものはない'
         ],
         correct: '１階',
-        hint:'大学に来てたらわかりますよね',
+        hint:'使ったことあるならわかると思います！',
         tip:'１階の玄関から入ると、右側に食堂があります(写真は公式サイトから)'
+    },
+    {
+        question: '食堂の椅子の板は何でできているでしょうか？',
+        choices: [
+            '鉄板',
+            'プラスチック',
+            '木',
+            '石'
+        ],
+        correct: '木',
+        hint:'椅子の模型を見てみよう！',
+        tip:'写真でわかるとおり、木で出来ています。'
+    },
+    {
+        question: '食堂では１日あたりどれほどの人が使っているでしょうか？',
+        choices: [
+            '約２５０人',
+            '約３５０人',
+            '約４５０人',
+            '約１０００人'
+        ],
+        correct: '約３５０人',
+        hint:'参考として、大学には約１３００人いるらしいです',
+        tip:'1日で３５０人も食堂を利用しています。すごいですね。'
+    },
+    {
+        question: '食堂は何階にありますか？',
+        choices: [
+            '２階',
+            '１階',
+            '地下２階',
+            '食堂なんてものはない'
+        ],
+        correct: '１階',
+        hint:'使ったことあるならわかると思います！',
+        tip:'１階の玄関から入ると、右側に食堂があります(写真は公式サイトから)'
+    },
+    {
+        question: '食堂の人気No1のメニューは何でしょう？',
+        choices: [
+            'チキン竜田丼',
+            '日替わり定食',
+            '味噌ラーメン',
+            '食堂な'
+        ],
+        correct: 'チキン竜田丼',
+        hint:'年を取ると厳しくなるかも・・・',
+        tip:'人気No1はチキン竜田丼！定番メニューで美味しいですよね'
+    },
+    {
+        question: '大学の後期終了間近に食堂で行われる豪華なイベントは何でしょう？',
+        choices: [
+            '１０００円のコースメニューが出る',
+            'ドリンクバーが導入され、色々な飲み物が飲める',
+            'ビュッフェ形式になる',
+            '全ての商品が無料になる'
+        ],
+        correct: '全ての商品が無料になる',
+        hint:'みんなお腹いっぱいになれるかもしれません',
+        tip:'なんと全ての商品が無料になってしまいます！今年度も行われたら是非行きたいですね'
     },
 ]
 
@@ -91,6 +151,7 @@ const result = document.querySelector(".result");
 
 const params = new URLSearchParams(window.location.search);
 const username = params.get("username") || "匿名";
+
 
 
 const quizLength = quiz.length;
@@ -170,7 +231,6 @@ const clickHandler = (e) => {
 
     v.addEventListener("ended", (event) =>{
         showQuiz();
-   
        });
 
 }
@@ -228,7 +288,8 @@ function nextQuiz(){
         document.getElementById('answerphoto').style.display = 'none';
         //document.getElementById('quizscore').textContent = 'sasaas';
 
-        window.location.href = `ranking.html?score=${score}`;
+        // window.location.href = `ranking.html?score=${score}`;
+        window.location.href = `ranking.html?username=${encodeURIComponent(username)}&score=${score}`;
 
     }
 
