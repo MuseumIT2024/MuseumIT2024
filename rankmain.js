@@ -51,7 +51,7 @@ window.onload = function () {
 
     if(s>62){
         document.getElementById('level').textContent="学長レベルです";
-        document.getElementById('t-text').textContent=username+"学長なら、こんなクイズ朝飯前ですよね";
+        document.getElementById('t-text').textContent=username+"学長なら、こんなクイズ朝飯前ですよね。受付の人にこの画面をみせると何かあるみたいですよ？";
     }
 
 
