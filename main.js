@@ -34,7 +34,7 @@ const quiz = [
         ],
         correct: '帯を切り取り表紙の裏に貼ることで、帯の内容を残している',
         hint:'帯を捨てるということがなくなります',
-        tip:'帯を切り取り表紙の裏にはることで帯の内容を残している。透明なカバーで本を覆っていたり、情報ライブラリー独自でのこだわりもあるので実際に見てみてね'
+        tip:'ほかにも、透明なカバーで本を覆っていたりと、情報ライブラリー独自でのこだわりもあるので実際に見てみてください'
     },
     {
         question: 'ライブラリーの奥の方に４つの大きなオブジェがあります。どんな特徴をしていますか？',
@@ -46,7 +46,7 @@ const quiz = [
         ],
         correct: '全て違う',
         hint:'情報ライブラリーの入口とは反対側の端っこにあります',
-        tip:'よく見てね、4つとも違う形をしているよ'
+        tip:'よーく見ると、４つとも違う形をしています'
     },
     {
         question: '情報ライブラリーには様々な特徴のある家具がある。1つは寝転んで本が読めるような家具。2つ目は何ですか？',
@@ -94,7 +94,7 @@ const quiz = [
         ],
         correct: '木',
         hint:'椅子の模型を見てみよう！',
-        tip:'写真でわかるとおり、木で出来ています。'
+        tip:'写真でわかるとおり、木で出来ています'
     },
     {
         question: '食堂では１日あたりどれほどの人が使っているでしょうか？',
@@ -106,7 +106,7 @@ const quiz = [
         ],
         correct: '約３５０人',
         hint:'参考として、大学には約１３００人いるらしいです',
-        tip:'1日で３５０人も食堂を利用しています。すごいですね。'
+        tip:'1日で３５０人も食堂を利用しています。すごいですね'
     },
     {
         question: '食堂は何階にありますか？',
@@ -295,8 +295,7 @@ function nextQuiz(){
 
     function hideQuiz(){ 
         document.getElementById('card').style.display = 'none';
-        document.getElementById('card').style.height = '58vh';
-        document.getElementById('card').style.height = '58svh';
+
         document.getElementById('hintbutton').style.display = 'none';
         document.getElementById('hintphoto').style.display = 'none';
         document.getElementById('username').style.display='none'
