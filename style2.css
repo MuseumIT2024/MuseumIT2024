@@ -303,7 +303,10 @@ text-align: left;
 #id{
   display: none;
 }
-
+.tt{
+  color:#ffffff
+    }
+    
 .bg_pattern {
   position: fixed;
   top: 0;
